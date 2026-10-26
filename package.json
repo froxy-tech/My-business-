@@ -1,0 +1,21 @@
+{
+  "name": "froxy-assistant-extra-marge",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Owner-locked WhatsApp business assistant with group management and branded PDF invoices.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "check": "node --check index.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "6.7.24",
+    "dotenv": "^16.6.1",
+    "pdfkit": "0.20.2",
+    "pino": "^9.7.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
