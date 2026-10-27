@@ -18,6 +18,7 @@ const INVOICES_DIR = path.resolve(process.env.INVOICES_DIR || path.join(ROOT, 'i
 const LOGO_FILE = path.join(ROOT, 'logo.png');
 
 // Create parent folders recursively before Baileys attempts to use the session directory.
+fs.mkdirSync(path.dirname(DATA_DIR), { recursive: true });
 fs.mkdirSync(DATA_DIR, { recursive: true });
 fs.mkdirSync(SESSION_DIR, { recursive: true });
 fs.mkdirSync(INVOICES_DIR, { recursive: true });
@@ -27,7 +28,7 @@ function digits(value) {
 }
 
 const OWNER_NUMBER = digits(process.env.OWNER_NUMBER || '263712552662');
-const GROUP_LINK = process.env.GROUP_LINK || 'https://chat.whatsapp.com/GcVgHuHQIe3AYr0FP0EeyP?s=cl&p=a&mlu=4&ilr=4';
+const GROUP_LINK = process.env.GROUP_LINK || 'https://chat.whatsapp.com/L5rCa85HLHO7heIFqsomIM?s=cl&p=a&mlu=4&ilr=4&iam=2';
 const BUSINESS_NAME = process.env.BUSINESS_NAME || 'FXT SOLUTIONS';
 const ECOCASH_NUMBER = process.env.ECOCASH_NUMBER || OWNER_NUMBER;
 const INNBUCKS_NUMBER = process.env.INNBUCKS_NUMBER || OWNER_NUMBER;
