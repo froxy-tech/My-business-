@@ -3,6 +3,12 @@
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
+
+const DATA_DIR = path.join(__dirname, 'database');
+const SESSION_DIR = path.join(__dirname, 'session_froxy_mini');
+
+require('fs').mkdirSync(DATA_DIR, { recursive: true });
+require('fs').mkdirSync(SESSION_DIR, { recursive: true });
 const P = require('pino');
 const qrcode = require('qrcode-terminal');
 const PDFDocument = require('pdfkit');
