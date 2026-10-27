@@ -10,7 +10,7 @@ const makeWASocket = require('@whiskeysockets/baileys').default;
 const { useMultiFileAuthState, DisconnectReason } = require('@whiskeysockets/baileys');
 
 const ROOT = __dirname;
-const DATA_DIR = path.resolve(process.env.DATA_DIR || path.join(ROOT, 'data'));
+const DATA_DIR = path.join(ROOT, 'data');
 const SESSION_DIR = path.join(DATA_DIR, 'session_froxy_assistant');
 const LEADS_FILE = path.join(DATA_DIR, 'leads.json');
 const SETTINGS_FILE = path.join(DATA_DIR, 'settings.json');
