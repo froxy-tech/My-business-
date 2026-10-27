@@ -6,9 +6,6 @@ const path = require('path');
 
 const DATA_DIR = path.join(__dirname, 'database');
 const SESSION_DIR = path.join(__dirname, 'session_froxy_mini');
-
-require('fs').mkdirSync(DATA_DIR, { recursive: true });
-require('fs').mkdirSync(SESSION_DIR, { recursive: true });
 const P = require('pino');
 const qrcode = require('qrcode-terminal');
 const PDFDocument = require('pdfkit');
@@ -25,8 +22,8 @@ const LOGO_FILE = path.join(ROOT, 'logo.png');
 
 // Create parent folders recursively before Baileys attempts to use the session directory.
 fs.mkdirSync(path.dirname(DATA_DIR), { recursive: true });
-fs.mkdirSync(DATA_DIR, { recursive: true });
-fs.mkdirSync(SESSION_DIR, { recursive: true });
+require('fs').mkdirSync(DATA_DIR, { recursive: true });
+require('fs').mkdirSync(SESSION_DIR, { recursive: true });
 fs.mkdirSync(INVOICES_DIR, { recursive: true });
 
 function digits(value) {
